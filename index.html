@@ -33,18 +33,19 @@
             <button type="button" class="btn btn-primary" id="level-3">Expert</button>
         </div>
     </div>
+ 
 
-    
-
-    <div class="container bg-light text-center mt-5 p-3" id="beginner-level" style="display: none;">
+    <div class="container bg-light text-center mt-5 p-3 beginner-level" id="beginner-level" style="display: none;">
         <h2>Beginner Level</h2>
         <p>Please choose one language to continue..</p>
-        <div class="container mt-4">
+        <div class="container mt-4" id="content">
             <button type="button" class="btn btn-primary" id="HTML">HTML</button>
             <button type="button" class="btn btn-primary" id="JS">JAVASCRIPT</button>
             <button type="button" class="btn btn-primary">CSS</button>
         </div>
     </div>
+
+
 
     <!-- HTML questions for beginner level starting down here -->
     <div class="container bg-light " >
@@ -53,81 +54,80 @@
         <div class="container" id="page-1">
             <h5>1: What does HTML stand for?</h5>
 
-            <input type="radio" name="Answer-1-html" id="">
+            <input type="radio" name="Answer-1-html" id="Qn1" value="A">
             <label for="">a: HyperText Machine Language</label><br>
+            
 
-            <input type="radio" name="Answer-1-html" id="">
+            <input type="radio" name="Answer-1-html" id="Qn2"  value="B">
             <label for="">b: HyperText Markup Language</label><br>
 
-            <input type="radio" name="Answer-1-html" id="">
+
+            <input type="radio" name="Answer-1-html" id="Qn3"  value="C">
             <label for="">c: HighText Modern Language</label><br>
+            <p id="Incorrect_1"></p>
             <br>
 
             <h5>2. Which tag is used to define the title of an HTML document?</h5>
 
-            <input type="radio" name="Answer-2-html" id="">
+            <input type="radio" name="Answer-2-html" id="" value="A">
             <label for="">a: &lt;body&gt;</label><br>
+            
 
-            <input type="radio" name="Answer-2-html" id="">
+
+            <input type="radio" name="Answer-2-html" id="" value="B">
             <label for="">b: &lt;head&gt;</label><br>
 
-            <input type="radio" name="Answer-2-html" id="">
+
+            <input type="radio" name="Answer-2-html" id="" value="C">
             <label for="">c: &lt;title&gt;</label><br>
+            <p id="Incorrect_2"></p>
             <br>
 
             <h5>3: What is the purpose of the &lt;head&gt; section in HTML?</h5>
             
-            <input type="radio" name="Answer-3-html" id="">
+            <input type="radio" name="Answer-3-html" id="" value="A">
             <label for="">a: To display main content</label><br>
-            
-            <input type="radio" name="Answer-3-html" id="">
-            <label for="">b: To link CSS, metadata, and scripts </label><br>
+            <p id="demo"></p>
 
-            <input type="radio" name="Answer-3-html" id="">
+            
+            <input type="radio" name="Answer-3-html" id="" value="B">
+            <label for="">b: To link CSS, metadata, and scripts </label><br>
+            <p id="demo"></p>
+
+
+            <input type="radio" name="Answer-3-html" id="" value="C">
             <label for="">c: To hold images</label><br>
+            <p id="Incorrect_3"></p>
+
+            <div class="container bg-light d-flex justify-content-between">
+                <button type="submit" class="btn btn-dark mt-3 mb-3" id="prev">Prev</button>
+                <button type="submit" class="btn btn-dark mt-3 mb-3" id="next-1">Next</button>
+            </div>
+
         </div>
-        <button type="submit" class="btn btn-dark mt-3 mb-3" id="next-1">Next question</button>
+        
         </div>
 
         <!-- Continues of questions -->
         <div class="container" id="page-2" style="display: none;">
-            <h2 class="text-center">HTML</h2>
-            <h5>1: What does HTML stand for?</h5>
+            <!-- <h2 class="text-center">HTML</h2> -->
+            <h5>4. Write the correct HTML tag to create a paragraph:</h5>
+            <input type="text" class="form-control" name="Answer-4-html" id="user-answer-4" placeholder="Your answer here"><br><br>
+            <p id="Incorrect_4"></p>
 
-            <input type="radio" name="Answer-4-html" id="">
-            <label for="">a: HyperText Machine Language</label><br>
+            <h5>5. What tag is used to insert an image in HTML?</h5>
+            <input type="text" class="form-control" name="Answer-5-html" id="user-answer-5" placeholder="Your answer here"><br><br>
+            <p id="Incorrect_5"></p>
 
-            <input type="radio" name="Answer-4-html" id="">
-            <label for="">b: HyperText Markup Language</label><br>
+            <h5>6. How do you create a clickable link in HTML?</h5>
+            <input type="text" class="form-control" name="Answer-6-html" id="user-answer-6" placeholder="Your answer here"><br><br>
+            <p id="Incorrect_6"></p>
 
-            <input type="radio" name="Answer-4-html" id="">
-            <label for="">c: HighText Modern Language</label><br>
-            <br>
-
-            <h5>2. Which tag is used to define the title of an HTML document?</h5>
-
-            <input type="radio" name="Answer-5-html" id="">
-            <label for="">a: &lt;body&gt;</label><br>
-
-            <input type="radio" name="Answer-5-html" id="">
-            <label for="">b: &lt;head&gt;</label><br>
-
-            <input type="radio" name="Answer-5-html" id="">
-            <label for="">c: &lt;title&gt;</label><br>
-            <br>
-
-            <h5>3: What is the purpose of the &lt;head&gt; section in HTML?</h5>
-
-            <input type="radio" name="Answer-6-html" id="">
-            <label for="">a: To display main content</label><br>
-
-            <input type="radio" name="Answer-6-html" id="">
-            <label for="">b: To link CSS, metadata, and scripts </label><br>
-            
-            <input type="radio" name="Answer-6-html" id="">
-            <label for="">c: To hold images</label><br>
-
-            <button type="submit" class="btn btn-success mt-3 mb-3 d-flex justify-content-end" id="submit">Submit</button>
+            <div class="container bg-light d-flex justify-content-between">
+                <button type="submit" class="btn btn-dark mt-3 mb-3" id="prev-1">Prev</button>
+                <button type="submit" class="btn btn-success mt-3 mb-3 d-flex justify-content-end" id="submit">Submit</button>  
+            </div>
+            <a href="http://" class="nav-link text-center mb-3" id="link-results" style="display: none;">View your results</a>
         </div>
     </div>
     <!-- end of html question for beginner level -->
