@@ -3,7 +3,7 @@ const Marks = [];
 let marks = 2;
 
 
-const SelectionContents = [document.getElementById('beginner-level'),document.getElementById('html'),];
+const SelectionContents = [document.getElementById('beginner-level'),document.getElementById('html')];
 const Iteration = SelectionContents[Symbol.iterator]();
 let ShowContents = document.getElementById('display');
 
@@ -116,14 +116,14 @@ document.getElementById('submit').addEventListener('click',function(){
         Incorrect_4.innerHTML = IncorrectAnswer;
     }
 
-    if (question5 === "<img src=''>") {
+    if (question5 === "<img src=''>" || '<img src = "">') {
         Marks.push(marks);
         Incorrect_5.innerHTML = CorrectAnswer
     } else {
         Incorrect_5.innerHTML = IncorrectAnswer;
     }
 
-    if (question6 === "<a href=''></a>") {
+    if (question6 === "<a href=''></a>" || '<a href = ""></a>') {
         Marks.push(marks);
         Incorrect_6.innerHTML = CorrectAnswer
     } else {
@@ -149,4 +149,63 @@ document.getElementById('submit').addEventListener('click',function(){
 
     this.disabled = true;
     
+})
+
+// javascript
+
+const Jscontents = [document.getElementById('javascript'),document.getElementById('js-2')];
+const Jsiteration = Jscontents[Symbol.iterator]();
+
+document.getElementById('JS').addEventListener('click',function(){
+    document.querySelector('.beginner-level').style.display = 'none';
+    let iterationValue = Jsiteration.next();
+    if (!iterationValue.done) {
+        Jscontents.forEach(page1 => page1.style.display = 'none');
+        iterationValue.value.style.display = 'block';
+        ShowContents.innerHTML = iterationValue.value.id = '';
+    } else {
+        
+    }
+})
+
+
+const QuestionContents_js = [document.getElementById('js-1'),document.getElementById('js-2')];
+let CurrentQuestion_js = 0;
+
+
+const QuestionSliding_js = (index) =>
+{
+    
+    QuestionContents_js.forEach(question => question.style.display = 'none');
+    QuestionContents_js[index].style.display = 'block';
+
+}
+
+QuestionSliding_js(CurrentQuestion_js);
+
+document.getElementById('next-js').addEventListener('click',function(){
+    if (CurrentQuestion_js < QuestionContents_js.length -1) {
+        CurrentQuestion_js++;
+        QuestionSliding_js(CurrentQuestion_js);
+    } else {
+        
+    }
+})
+
+document.getElementById('prev-js').addEventListener('click',function(){
+    if (CurrentQuestion_js > 0) {
+        CurrentQuestion_js--;
+        QuestionSliding_js(CurrentQuestion_js);
+    } else {
+        
+    }
+})
+
+document.getElementById('prev-js-2').addEventListener('click',function(){
+    if (CurrentQuestion_js > 0) {
+        CurrentQuestion_js--;
+        QuestionSliding_js(CurrentQuestion_js);
+    } else {
+        
+    }
 })
