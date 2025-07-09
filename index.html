@@ -7,7 +7,8 @@
     <meta name="description" content="e-Exam platform">
     <title>e-Exam</title>
     <link rel="stylesheet" href="/css/style.css">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- Bootstrap 5 JavaScript Bundle (includes Popper) -->
@@ -100,7 +101,7 @@
             <p id="Incorrect_3"></p>
 
             <div class="container bg-light d-flex justify-content-between">
-                <button type="submit" class="btn btn-dark mt-3 mb-3" id="prev">⬅️</button>
+                <button type="submit" class="btn btn-dark mt-3 mb-3" id="prev"><i class="fa-solid fa-right" style="font-size: 40px;"></i> </button>
                 <button type="submit" class="btn btn-dark mt-3 mb-3" id="next-1">➡️</button>
             </div>
 
@@ -124,7 +125,7 @@
             <p id="Incorrect_6"></p>
 
             <div class="container bg-light d-flex justify-content-between">
-                <button type="submit" class="btn btn-dark mt-3 mb-3" id="prev-1">⬅️</button>
+                <button type="button" class="btn btn-dark mt-3 mb-3" id="prev-1">⬅️</button>
                 <button type="submit" class="btn btn-success mt-3 mb-3 d-flex justify-content-end" id="submit">Submit</button>  
             </div>
             <a href="http://" class="nav-link text-center mb-3" id="link-results" style="display: none;">View your results</a>
@@ -144,16 +145,19 @@
             <input type="radio" name="q1" id="q1a" value="a"> <label for="q1a">a) a tag</label><br>
             <input type="radio" name="q1" id="q1b" value="b"> <label for="q1b">b) a function</label><br>
             <input type="radio" name="q1" id="q1c" value="c"> <label for="q1c">c) a variable</label><br>
+            <p id="js-show-1"></p>
 
             <h5>2. How do you write a comment in JavaScript?</h5>
             <input type="radio" name="q2" id="q2a" value="a"> <label for="q2a">a) &lt;!-- comment --&gt;</label><br>
             <input type="radio" name="q2" id="q2b" value="b"> <label for="q2b">b) # comment</label><br>
             <input type="radio" name="q2" id="q2c" value="c"> <label for="q2c">c) // comment</label><br>
+            <p id="js-show-2"></p>
 
             <h5>3. Which keyword is used to define a function?</h5>
             <input type="radio" name="q3" id="q3a" value="a"> <label for="q3a">a) method</label><br>
             <input type="radio" name="q3" id="q3b" value="b"> <label for="q3b">b) define</label><br>
             <input type="radio" name="q3" id="q3c" value="c"> <label for="q3c">c) function</label><br>
+            <p id="js-show-3"></p>
 
             <div class="container bg-light p-3 d-flex justify-content-between">
                 <button type="button" class="btn btn-dark mt-3 mb-3" id="prev-js">Prev</button>
@@ -166,20 +170,23 @@
         
 
         <div class="container" id="js-2" style="display: none;">
-            <h2 class="text-center">JAVASCRIPT</h2>
+            <h2 class="text-center">JavaScript</h2>
 
             <h5>4. Write a JavaScript variable named name and assign it the value "John".</h5>
-            <input type="text" class="form-control" name="q4" placeholder="Type your answer here"><br>
+            <input type="text" class="form-control" name="q4" id="q4" placeholder="Type your answer here"><br>
+            <p id="js-show-4"></p>
 
             <h5>5. What is the output of this code: console.log(5 + "5");</h5>
-            <input type="text" class="form-control" name="q5" placeholder="Type your answer here"><br>
+            <input type="text" class="form-control" name="q5" id="q5" placeholder="Type your answer here"><br>
+            <p id="js-show-5"></p>
 
             <h5>6. How do you display an alert popup that says 'Hello World'?</h5>
-            <input type="text" class="form-control" name="q6" placeholder="Type your answer here"><br>
+            <input type="text" class="form-control" name="q6" id="q6" placeholder="Type your answer here"><br>
+            <p id="js-show-6"></p>
 
             <div class="container d-flex p-3 justify-content-between">
-                <button type="submit" class="btn btn-success mt-3 mb-3" id="prev-js-2">Prev</button>
-                <button type="submit" class="btn btn-success mt-3 mb-3" id="next-2">Submit</button>
+                <button type="button" class="btn btn-success mt-3 mb-3" id="prev-js-2">Prev</button>
+                <button type="submit" class="btn btn-success mt-3 mb-3" id="submit-js">Submit</button>
             </div>
             
             
