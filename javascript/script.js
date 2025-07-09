@@ -3,6 +3,8 @@ const Marks = [];
 let marks = 2;
 
 
+
+
 const SelectionContents = [document.getElementById('beginner-level'),document.getElementById('html')];
 const Iteration = SelectionContents[Symbol.iterator]();
 let ShowContents = document.getElementById('display');
@@ -116,14 +118,14 @@ document.getElementById('submit').addEventListener('click',function(){
         Incorrect_4.innerHTML = IncorrectAnswer;
     }
 
-    if (question5 === "<img src=''>" || '<img src = "">') {
+    if (question5 === '<img src="">') {
         Marks.push(marks);
         Incorrect_5.innerHTML = CorrectAnswer
     } else {
         Incorrect_5.innerHTML = IncorrectAnswer;
     }
 
-    if (question6 === "<a href=''></a>" || '<a href = ""></a>') {
+    if (question6 === '<a href=""></a>') {
         Marks.push(marks);
         Incorrect_6.innerHTML = CorrectAnswer
     } else {
@@ -209,3 +211,91 @@ document.getElementById('prev-js-2').addEventListener('click',function(){
         
     }
 })
+
+// javscript answer validation
+
+document.getElementById('submit-js').addEventListener('click', function(){
+
+    const js_marks = [];
+    let js_mark = 2;
+
+    const question1_js = document.querySelector('input[name="q1"]:checked');
+    const question2_js = document.querySelector('input[name="q2"]:checked');
+    const question3_js = document.querySelector('input[name="q3"]:checked');
+    const question4_js = document.getElementById('q4').value;
+    const question5_js = document.getElementById('q5').value;
+    const question6_js = document.getElementById('q6').value;
+
+   let text_correct = `<p class="alert alert-success text-center">✔️ Correct ${js_mark} marks!</p>`;
+   let text_icorrect = `<p class="alert alert-success text-center">❌ Incorrect  Answer! </p>`;
+    
+    const Incorrect_1 = document.getElementById('js-show-1');
+    const Incorrect_2 = document.getElementById('js-show-2');
+    const Incorrect_3 = document.getElementById('js-show-3');
+    const Incorrect_4 = document.getElementById('js-show-4');
+    const Incorrect_5 = document.getElementById('js-show-5');
+    const Incorrect_6 = document.getElementById('js-show-6');
+
+
+
+    if (question1_js.value === "c") {
+        js_marks.push(js_mark);
+        Incorrect_1.innerHTML = text_correct;
+        
+    } else {
+        Incorrect_1.innerHTML = text_icorrect;
+    }
+
+    if (question2_js.value === "c") {
+        js_marks.push(js_mark);
+        Incorrect_2.innerHTML = text_correct;
+        
+    } else {
+        Incorrect_2.innerHTML = text_icorrect;
+    }
+
+    if (question3_js.value === "c") {
+        js_marks.push(js_mark);
+        Incorrect_3.innerHTML = text_correct;
+        
+    } else {
+        Incorrect_3.innerHTML = text_icorrect;
+    }
+
+    if (question4_js === 'let name = "John"' || question4_js === 'const name = "John"') {
+        js_marks.push(js_mark);
+        Incorrect_4.innerHTML = text_correct;
+        
+    } else {
+        Incorrect_4.innerHTML = text_icorrect;
+    }
+
+    if (question5_js === "55") {
+        js_marks.push(js_mark);
+        Incorrect_5.innerHTML = text_correct;
+        
+    } else {
+        Incorrect_5.innerHTML = text_icorrect;
+    }
+
+    if (question6_js === 'alert("Hello World");') {
+        js_marks.push(js_mark);
+        Incorrect_6.innerHTML = text_correct;
+        
+    } else {
+        Incorrect_6.innerHTML = text_icorrect;
+    }
+
+
+    let totalMarks = js_marks.reduce(function(va,vb){
+        return va + vb;
+    })
+    
+    console.log(totalMarks);
+    
+
+    
+})
+
+
+
