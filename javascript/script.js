@@ -227,7 +227,7 @@ document.getElementById('submit-js').addEventListener('click', function(){
     const question6_js = document.getElementById('q6').value;
 
    let text_correct = `<p class="alert alert-success text-center">✔️ Correct ${js_mark} marks!</p>`;
-   let text_icorrect = `<p class="alert alert-success text-center">❌ Incorrect  Answer! </p>`;
+   let text_icorrect = `<p class="alert alert-danger text-center">❌ Incorrect  Answer! </p>`;
     
     const Incorrect_1 = document.getElementById('js-show-1');
     const Incorrect_2 = document.getElementById('js-show-2');
@@ -262,7 +262,7 @@ document.getElementById('submit-js').addEventListener('click', function(){
         Incorrect_3.innerHTML = text_icorrect;
     }
 
-    if (question4_js === 'let name = "John"' || question4_js === 'const name = "John"') {
+    if (question4_js === 'let name="John";' || question4_js === 'const name="John";') {
         js_marks.push(js_mark);
         Incorrect_4.innerHTML = text_correct;
         
@@ -278,7 +278,7 @@ document.getElementById('submit-js').addEventListener('click', function(){
         Incorrect_5.innerHTML = text_icorrect;
     }
 
-    if (question6_js === 'alert("Hello World");') {
+    if (question6_js === 'alert("Hello World");' || question6_js === "alert('Hello World');") {
         js_marks.push(js_mark);
         Incorrect_6.innerHTML = text_correct;
         
@@ -291,7 +291,7 @@ document.getElementById('submit-js').addEventListener('click', function(){
         return va + vb;
     })
     
-    console.log(totalMarks);
+    
     
 
     
