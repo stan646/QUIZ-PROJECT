@@ -24,9 +24,8 @@
         </nav>
         <h1>e-Examinations Platform</h1>
     </div>
-
-    <p id="display"></p>
-    <div class="container bg-light mt-5 p-3 text-center" id="intro">
+<h2 id="welcome" style="display: none;">Welcome</h2>
+    <div class="container bg-light mt-5 p-3 text-center" id="intro" style="display: none;">
         <h2>Choose your learning level</h2>
         <div class="container mt-4">
             <button type="button" class="btn btn-primary" id="level-1">Beginner</button>
@@ -34,7 +33,6 @@
             <button type="button" class="btn btn-primary" id="level-3">Expert</button>
         </div>
     </div>
- 
 
     <div class="container bg-light text-center mt-5 p-3 beginner-level" id="beginner-level" style="display: none;">
         <h2>Beginner Level</h2>
@@ -45,7 +43,10 @@
             <button type="button" class="btn btn-primary">CSS</button>
         </div>
     </div>
-
+    <div class="container d-flex bg-light justify-content-center mt-5">
+        <button type="submit" class="btn btn-dark mt-3 mb-3" id="Next-1">Start testing yourself</button>
+        <button type="button" class="btn btn-dark mt-3 mb-3" id="prev-back" style="display: none;">Back</button>
+    </div>
 
 
     <!-- HTML questions for beginner level starting down here -->
@@ -101,8 +102,8 @@
             <p id="Incorrect_3"></p>
 
             <div class="container bg-light d-flex justify-content-between">
-                <button type="submit" class="btn btn-dark mt-3 mb-3" id="prev"><i class="fa-solid fa-right" style="font-size: 40px;"></i> </button>
-                <button type="submit" class="btn btn-dark mt-3 mb-3" id="next-1">➡️</button>
+                <button type="button" class="btn btn-dark mt-3 mb-3" id="prev">⬅️</button>
+                <button type="button" class="btn btn-dark mt-3 mb-3" id="next-qn">➡️</button>
             </div>
 
         </div>
